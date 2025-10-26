@@ -178,7 +178,7 @@ class _ElevatorControlState extends State<ElevatorControl> {
       localizedStrings[widget.currentLanguage] ?? localizedStrings['it']!;
 
   Future<void> _vibrateOnce() async {
-    bool hasVibrator = await Vibration.hasVibrator() ?? false;
+    bool hasVibrator = await Vibration.hasVibrator();
     if (hasVibrator && _isVibrationEnabled) {
       Vibration.vibrate(duration: 500);
     }
